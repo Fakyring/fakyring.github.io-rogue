@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.field-box {
+    border: 2px solid #d0d0d0;
+    float: left;
+}
+
+.field {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    position: relative;
+    width: 1000px;
+    height: 600px;
+}
+
+.field .tile {
+    background-image: url(images/tile-.png);
+    background-size: 100%;
+    width: 25px;
+    z-index: 5;
+}
+
+.field .tileW {
+    background-image: url(images/tile-W.png);
+    background-size: 100%;
+    width: 25px;
+}
+
+.field .tileE {
+    position: relative;
+    background-image: url(images/tile-E.png);
+    background-size: 100%;
+    width: 25px;
+    z-index: 10;
+}
+
+.field .tileP {
+    position: relative;
+    background-image: url(images/tile-P.png);
+    background-size: 100%;
+    width: 25px;
+    z-index: 10;
+}
+
+.field .tileHP {
+    background-image: url(images/tile-HP.png);
+    background-size: 100%;
+    width: 25px;
+    z-index: 9;
+}
+
+.field .tileSW {
+    background-image: url(images/tile-SW.png);
+    background-size: 100%;
+    width: 25px;
+    z-index: 9;
+}
+
+.field .tileE .health {
+    background-color: #ff0000;
+    z-index: 11;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 3px;
+}
+
+.field .tileP .health {
+    background-color: #00ff00;
+    z-index: 11;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 3px;
+}
+
+.inventory-box {
+    border: 2px solid #d0d0d0;
+    float: left;
+}
+
+.inventory {
+    position: relative;
+    width: 800px;
+    height: 32px;
+}
+
+.cl {
+    clear: both;
+    display: block;
+}
+
+footer {
+    display: flex;
+    flex-flow: column;
+    width: 1000px;
+}
+
+footer h1 {
+    margin: 0;
+}
+
+footer .task {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+footer h2 {
+    margin: 10px 0;
+}
