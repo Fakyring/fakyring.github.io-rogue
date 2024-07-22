@@ -1,8 +1,3 @@
-* {
-    box-sizing: border-box;
-    --size: 2.5%;
-}
-
 body, html {
     overflow: hidden;
     height: 100%;
@@ -39,46 +34,52 @@ h1 {
     height: 100%;
 }
 
+* {
+    box-sizing: border-box;
+    --wSize: 2.5%;
+    --bgSize: 100% 100%;
+}
+
 .field .tile {
-    background-image: url(images/tile-.png);
-    background-size: 100%;
-    width: var(--size);
+    background: url(images/tile-.png) no-repeat;
+    background-size: var(--bgSize);
+    width: var(--wSize);
     z-index: 5;
 }
 
 .field .tileW {
-    background-image: url(images/tile-W.png);
-    background-size: 100%;
-    width: var(--size);
+    background: url(images/tile-W.png) no-repeat;
+    background-size: var(--bgSize);
+    width: var(--wSize);
 }
 
 .field .tileE {
     position: relative;
-    background-image: url(images/tile-E.png);
-    background-size: 100%;
-    width: var(--size);
+    background: url(images/tile-E.png) no-repeat;
+    background-size: var(--bgSize);
+    width: var(--wSize);
     z-index: 10;
 }
 
 .field .tileP {
     position: relative;
-    background-image: url(images/tile-P.png);
-    background-size: 100%;
-    width: var(--size);
+    background: url(images/tile-P.png) no-repeat;
+    background-size: var(--bgSize);
+    width: var(--wSize);
     z-index: 10;
 }
 
 .field .tileHP {
-    background-image: url(images/tile-HP.png);
-    background-size: 100%;
-    width: var(--size);
+    background: url(images/tile-HP.png) no-repeat;
+    background-size: var(--bgSize);
+    width: var(--wSize);
     z-index: 9;
 }
 
 .field .tileSW {
-    background-image: url(images/tile-SW.png);
-    background-size: 100%;
-    width: var(--size);
+    background: url(images/tile-SW.png) no-repeat;
+    background-size: var(--bgSize);
+    width: var(--wSize);
     z-index: 9;
 }
 

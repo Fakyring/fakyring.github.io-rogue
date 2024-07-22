@@ -102,11 +102,11 @@ function Game() {
                         result += `<div class="tileSW"></div>`
                         break
                     case 'e':
-                        result += `<div id="${eCounter}" class="tileE"><div class="health" style="width: ${enemies[eCounter].health / 4}pX"></div></div>`
+                        result += `<div id="${eCounter}" class="tileE"><div class="health" style="width: ${enemies[eCounter].health}%"></div></div>`
                         eCounter++
                         break
                     case 'p':
-                        result += `<div class="tileP"><div class="health" style="width: ${player.health / 4}pX"></div></div>`
+                        result += `<div class="tileP"><div class="health" style="width: ${player.health}%"></div></div>`
                         break
                 }
             }
