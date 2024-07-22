@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    --size: 2.5%;
 }
 
 body, html {
@@ -8,6 +9,9 @@ body, html {
 }
 
 body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
     background-color: #000000;
     color: #ffffff;
 }
@@ -22,6 +26,8 @@ h1 {
 .field-box {
     border: 2px solid #d0d0d0;
     float: left;
+    width: 100%;
+    height: 70%;
 }
 
 .field {
@@ -29,28 +35,28 @@ h1 {
     flex-flow: row;
     flex-wrap: wrap;
     position: relative;
-    width: 1000px;
-    height: 600px;
+    width: 100%;
+    height: 100%;
 }
 
 .field .tile {
     background-image: url(images/tile-.png);
     background-size: 100%;
-    width: 25px;
+    width: var(--size);
     z-index: 5;
 }
 
 .field .tileW {
     background-image: url(images/tile-W.png);
     background-size: 100%;
-    width: 25px;
+    width: var(--size);
 }
 
 .field .tileE {
     position: relative;
     background-image: url(images/tile-E.png);
     background-size: 100%;
-    width: 25px;
+    width: var(--size);
     z-index: 10;
 }
 
@@ -58,21 +64,21 @@ h1 {
     position: relative;
     background-image: url(images/tile-P.png);
     background-size: 100%;
-    width: 25px;
+    width: var(--size);
     z-index: 10;
 }
 
 .field .tileHP {
     background-image: url(images/tile-HP.png);
     background-size: 100%;
-    width: 25px;
+    width: var(--size);
     z-index: 9;
 }
 
 .field .tileSW {
     background-image: url(images/tile-SW.png);
     background-size: 100%;
-    width: 25px;
+    width: var(--size);
     z-index: 9;
 }
 
@@ -111,9 +117,11 @@ h1 {
 }
 
 footer {
+    margin: 0;
     display: flex;
     flex-flow: column;
-    width: 1000px;
+    width: 100vw;
+    height: 30vh;
 }
 
 footer h1 {
