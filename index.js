@@ -17,7 +17,7 @@ function Game() {
             if (checkList.includes(tiles[posY - 1][posX]) || checkList.includes(tiles[posY - 1][posX - 1]) || checkList.includes(tiles[posY - 1][posX + 1])) {
                 found = true
                 if (checkList[0] === 'e'){
-                    
+
                 }
             }
             if (checkList.includes(tiles[posY][posX]) || checkList.includes(tiles[posY][posX - 1]) || checkList.includes(tiles[posY][posX + 1])) {
