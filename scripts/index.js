@@ -7,6 +7,7 @@ var game = new Game()
 import {Random, generateField, generateRooms, getFloors, placeItems, generateCorridors} from './generation.js'
 
 function Game() {
+    let killEnemy = 0
     let tiles = [[], []]
     let potions = 0
     let swords = 1
@@ -171,9 +172,10 @@ function Game() {
                         break
                     case 'e':
                         let enemy = enemies[enemies.findIndex(enemy => (enemy.x === j && enemy.y === i))]
-                        if (enemy.health <= 0)
+                        if (enemy.health <= 0) {
+                            tiles[i][j] = 'f'
                             result += `<div class="tile"></div>`
-                        else
+                        } else
                             result += `<div class="tileE"><div class="health" style="width: ${enemy.health}%"></div></div>`
                         break
                     case 'p':
@@ -189,6 +191,7 @@ function Game() {
     }
 
     this.init = function () {
+        killEnemy = 0
         tiles = [[], []]
         potions = 0
         swords = 1
@@ -206,6 +209,7 @@ function Game() {
     }
 
     this.action = function (e) {
+        console.log(e.key)
         switch (e.key) {
             case 'w':
             case 'ц':
@@ -242,6 +246,11 @@ function Game() {
             case 'r':
             case 'к':
                 game.init()
+                break
+            case '-':
+                enemies[killEnemy].health = 0
+                killEnemy++
+                printDungeon()
                 break
         }
         printDungeon()
