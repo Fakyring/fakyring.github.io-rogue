@@ -1,3 +1,10 @@
+:root {
+    --wSize: calc(2.5%);
+    --bgSize: 100% 100%;
+    --fieldWidth: 100vw;
+    --fieldHeight: 25vh;
+}
+
 body, html {
     overflow: hidden;
     height: 100%;
@@ -18,26 +25,19 @@ h1 {
     margin: 0;
 }
 
-.field-box {
-    border: 2px solid #d0d0d0;
-    float: left;
-    width: 100%;
-    height: 70%;
-}
-
 .field {
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
     position: relative;
-    width: 100%;
-    height: 100%;
+    border: 2px solid #d0d0d0;
+    width: var(--fieldWidth);
+    height: var(--fieldHeight);
 }
 
 * {
+    user-select: none;
     box-sizing: border-box;
-    --wSize: 2.5%;
-    --bgSize: 100% 100%;
 }
 
 .field .tile {
@@ -101,40 +101,46 @@ h1 {
     height: 3px;
 }
 
-.inventory-box {
-    border: 2px solid #d0d0d0;
-    float: left;
-}
-
-.inventory {
-    position: relative;
-    width: 800px;
-    height: 32px;
-}
-
-.cl {
-    clear: both;
-    display: block;
-}
-
-footer {
-    margin: 0;
-    display: flex;
-    flex-flow: column;
-    width: 100vw;
-    height: 30vh;
-}
-
-footer h1 {
-    margin: 0;
-}
-
-footer .task {
+.info {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
 }
 
+.inventory {
+    display: flex;
+    flex-flow: column;
+}
+
+footer {
+    padding: 5px 10px;
+    margin: 0;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    width: var(--fieldWidth);
+    height: 30vh;
+}
+
+footer h1 {
+    margin: 0;
+    padding: 0;
+}
+
+footer .task {
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    width: fit-content;
+}
+
 footer h2 {
     margin: 10px 0;
+}
+
+footer .controls {
+    display: flex;
+    flex-flow: row;
+    gap: 20px;
 }

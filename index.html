@@ -13,28 +13,35 @@
 </head>
 <body>
 <h1>Игровое поле</h1>
-<div class="field-box">
-    <div class="field"></div>
-</div>
+<div class="field"></div>
 <div class="cl"></div>
 <!--h1>Инвентарь</h1>
 <div class="inventory-box"><div class="inventory"></div></div-->
 <footer>
-    <div>
-        <span id="potions"></span>
-        <span id="swords"></span>
+    <div class="info">
+        <div class="inventory">
+            <span id="potions"></span>
+            <span id="swords"></span>
+        </div>
+        <div class="health">
+            <span id="health"></span>
+        </div>
     </div>
     <div class="task">
         <h1>Убейте всех врагов</h1>
-        <h1>Ранний доступ</h1>
     </div>
-    <div>
-        <h2>WASD - движение</h2>
-        <h2>Space - удар</h2>
-        <h2>(H)eal - выпить зелье</h2>
+    <div class="controls">
+        <div>
+            <h2>WASD - движение</h2>
+            <h2>Space - удар</h2>
+        </div>
+        <div>
+            <h2>(H)eal - выпить зелье</h2>
+            <h2>(R)eload - перезапуск</h2>
+        </div>
     </div>
 </footer>
 </body>
 </html>
-<script type="module" src="generation.js"></script>
-<script type="module" src="index.js"></script>
+<script type="module" src="scripts/generation.js"></script>
+<script type="module" src="scripts/index.js"></script>
