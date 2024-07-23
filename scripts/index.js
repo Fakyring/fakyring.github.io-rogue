@@ -209,7 +209,6 @@ function Game() {
     }
 
     this.action = function (e) {
-        console.log(e.key)
         switch (e.key) {
             case 'w':
             case 'ц':
